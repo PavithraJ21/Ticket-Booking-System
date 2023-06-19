@@ -1,0 +1,60 @@
+.input{
+    width:400px;
+    padding:10px;
+    margin:10px;
+    color:floralwhite;
+}
+.set{
+    padding: 10px;
+}
+.submit-btn{
+    border:none;
+    outline:none;
+    width:200px;
+    padding:10px;
+    margin-left:200px;
+    color: black;
+}
+
+.signup-form{
+    height:650px;
+    width:600px;
+    margin-top:5%;
+    margin-left:25%;
+    background-color:dimgray;
+}
+.Signup-head{
+    padding:8px;
+}
+.signup-content .radio{
+    margin:10px 10px;
+}
+.signup-content2 .input{
+    width:400px;
+    padding:10px;
+    margin:10px;
+    color:black;
+}
+.signup-content2 .tarikh{
+    margin:10px;
+    padding:10px;
+    color:black;
+}
+.signup-content2  .person{
+    padding:10px;
+    margin:10px;
+    color:black;
+}
+.signup-content2 .travel{
+    margin:20px 20px;
+}
+.signup-content2 .travel2{
+    padding:5px;
+}
+.signup-content2 .submit-btn{
+    border:none;
+    outline:none;
+    width:200px;
+    padding:10px;
+    margin-left:200px;
+}

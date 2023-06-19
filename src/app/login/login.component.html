@@ -1,0 +1,28 @@
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+
+
+<h2>ADMIN SIGN FORM</h2><br>    
+    <div class="login">    
+    <form id="login" method="get">    
+        <label><b>User Name</b></label>  
+        <input type="text" name="Uname" id="Uname" placeholder="Username"[(ngModel)]="user">    
+        <br><br>    
+        <label><b>Password </b></label>
+        <input type="Password" name="Pass" id="Pass" placeholder="Password" [(ngModel)]="password">    
+        <br><br>   
+        <input  routerLink="admin" type="button" name="log" id="log" value="LogIn" (click)="verifyAdmin()">          
+        <br><br>
+        <button type="button" routerLink="/login2" class="btn btn-close">BACK</button><br><br> 
+        <div *ngIf="allow">
+            <button type="button"routerLink="/admin">Click to proceed further</button>>
+            
+        </div>       
+    </form>     
+</div>  

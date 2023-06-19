@@ -1,0 +1,77 @@
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+    <body class="text-center">
+        <div style="background-color: dimgrey;">
+            <h1 class="text-center"> REGISTRATION FORM</h1>
+        </div>
+        <div>
+            
+                <table border="5" class="table mt-3">
+                    <thead align="center">
+                        <tr>
+                            <th scope="col">S.No</th>
+                            <th scope="col">Train Name</th>
+                             <th scope="col">pnr no</th>
+                            <th scope="col">From</th>
+                            <th scope="col">TO</th>
+                            <th scope="col">Train cost</th>
+        
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let train of trainDetails;let i=index">
+                            <td >{{i+1}}</td>
+                            <td>{{train.TrainName}}</td>
+                            <td>{{train.TrainNo}}</td>
+                            <td >{{train.source}}</td>
+                            <td>{{train.destination}}</td>
+                        <td>{{train.cost}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+         
+
+            <div class="signup-form ">
+
+                <div class="Signup-head" style="color:whitesmoke; opacity: 0.5;">
+                    <h1>Reserve Your Ticket</h1>
+
+                <div class="signup-content">
+
+                <label style="margin-left:10px bg-dark" >NAME :</label><br>
+                <input type="text" class="text-white" id="t1" [(ngModel)]="rname"><br>
+                 <label style="margin-left:10px bg-dark">TRAIN NO :</label><br>
+                <input type="text" class="text-white"placeholder="PNR"  id="t2" [(ngModel)]="rpnr"><br>
+                 <label style="margin-left:10px bg-dark">FROM :</label><br>
+                <input type="text" class="text-white"placeholder="From" id="t3" [(ngModel)]="rfrom"><br>
+                <label style="margin-left:10px bg-dark">TO :</label><br>
+                <input type="text" class="text-white"placeholder="To" id="t4" [(ngModel)]="rto"><br>
+                <label style="margin-left:10px bg-dark">DATE :</label><br>
+                <input type="date" class="text-white"placeholder="Date" class="input" id="t5" [(ngModel)]="rdate"><br>
+                <label style="margin-left:10px bg-dark">No of ticket</label><br>
+                <input type="number" id="t6" [(ngModel)]="rnom"><br>
+                <button type="button" style="color: oldlace;" class="btn btn-close"routerLink="/login2"value="BACK">BACK</button><br>
+                <button type="button"style="color: oldlace;" value="REGISTER" class="btn btn-info" (click)="register()">register</button> 
+                </div>
+                </div>
+                 <div class="container" *ngIf=success>
+                <h2>Registration Details</h2>
+                <div class="alert alert-success">
+                     <strong>Registered successfully!</strong><b>Registered Name: </b>{{rname}}<br>
+                     <b>Train Number :</b>{{rpnr}}<br>
+                     <b>Date : </b>{{rdate}}<br>
+                     <b>From: </b>{{rfrom}}<br>
+                     <b>To: </b>{{rto}}<br>
+                     <b>No of Tickets: </b>{{rnom}}<br>
+                     <b>Amount : </b>{{charge}}<br>
+                 </div>
+                </div>
+        </div>
+        </div>
+</body>

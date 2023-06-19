@@ -1,0 +1,20 @@
+
+<div class="login"> 
+<form  method="get"> 
+    <label><b>Train Name</b></label>    
+    <input type="text" placeholder="trainName" name="t1" [(ngModel)]="rname"><br>
+    <label><b>Train No</b></label>  
+    <input type="text" placeholder="trainNum" name="t2" [(ngModel)]="rno"><br>
+    <label><b>From</b></label>  
+    <input type="text" placeholder="source" name="t3" [(ngModel)]="rsrc"><br>
+    <label><b>To</b></label><br>
+    <input type="text" placeholder="destination" name="t4" [(ngModel)]="rdes"><br>
+    <label><b>Price </b></label>  
+    <input type="text" placeholder="Price Per Ticket" name="t5" [(ngModel)]="rco"><br>
+    <button type="button" class="btn btn-danger" routerLink="/admin">Back</button>
+    <button type="button"class="btn btn-success" value="Add" class="submit-btn" (click)="add()">Add</button> 
+    
+</form>
+</div>
+
+

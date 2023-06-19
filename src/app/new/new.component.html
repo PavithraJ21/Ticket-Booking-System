@@ -1,0 +1,41 @@
+ <nav class="navbar navbar-light bg-primary">
+     <div class="container-fluid">
+         <h1 class="text-center"style="color:aliceblue">ADMIN PAGE</h1>
+         <div class="d-flex">
+            <button routerLink="/addtrain" type="button" id="add-btn" class="btn btn-success"  data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-info"> ADD TRAIN</button> 
+            <button routerLink="/adminLogin"class="btn btn-danger mx-2">Logout</button>
+            </div>
+     </div>
+
+ </nav>
+<table class="table mt-3">
+    <thead>
+        <tr>
+          <th scope="col">S.No</th>
+            <th scope="col">Train Name</th>
+            <th scope="col">pnr no</th>
+            <th scope="col">From</th>
+            <th scope="col">TO</th>
+            <th scope="col">Train cost</th>
+            <th scope="col">Action</th>
+
+        </tr>
+    </thead>
+
+<tbody>
+    <tr *ngFor="let train of trainDetails;let i=index">
+        <td id="t6">{{i+1}}</td>
+        <td id="t1">{{train.TrainName}}</td>
+        <td id="t2">{{train.TrainNo}}</td>
+        <td id="t3">{{train.source}}</td>
+        <td id="t4">{{train.destination}}</td>
+        <td id="t5">{{train.cost}}</td>
+        <td>
+            <button class="btn btn-danger" (click)="deleteTrain(train.TrainNo)">Delete</button>
+        </td>
+    </tr>
+</tbody>
+</table>
+
+
+ 

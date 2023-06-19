@@ -1,0 +1,37 @@
+<div class="imgset">
+    <div style="background-color: slategray;">
+    <marquee style=" color:thistle;font-family: cursive; font-size: xx-large;">Local Train Ticket Booking system</marquee>
+    <a href="/adminLogin" style="color: wheat;">Are You An Admin?</a>
+    </div>
+<div class="container">
+   
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card" >
+                <div class="text-center" >
+                    <h1>Login</h1>
+                    <h6>Please enter the username and password to continue!!</h6>
+                
+                </div>
+                <form>
+                     <div class="mb-3">
+                         <label for="t1" class="form-label" [(ngModel)]="user">Username</label>
+                         <input type="text" class="form-control" id="t1" aria-describedby="emailHelp" [(ngModel)]="user">
+                         <div id="emailHelp" class="form-text">We'll never share your useranme</div>
+                     </div>
+                     <div class="mb-3">
+                         <label for="t2" class="form-label">Password</label>
+                         <input type="password" class="form-control" id="t2" [(ngModel)]="paswd">
+                     </div>
+                     <button routerLink="{{imgsrc}}" type="submit" class="btn btn-primary mb-2"(click)="login()">Login</button>
+                </form>
+                <div *ngIf=allow>
+                    <button routerLink="/register" type="button">Click to proceed further</button>
+    
+                </div>
+                <a style="color: #fff;margin-top:10px" routerLink="/signup">New user? Click to Signup!!</a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

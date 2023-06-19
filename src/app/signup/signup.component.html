@@ -1,0 +1,27 @@
+
+<div class="container imgset">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>SignUp</h1>
+                    <h6>Please enter the username and password to continue!!</h6>
+                
+                </div>
+                <form>
+                     <div class="mb-3">
+                         <label for="t1" class="form-label">Username</label>
+                         <input type="text" id="t1" class="form-control"  aria-describedby="emailHelp"[(ngModel)]=user>
+                         <div id="emailHelp" class="form-text">We'll never share your useranme</div>
+                     </div>
+                     <div class="mb-3">
+                         <label for="t2" class="form-label">Password</label>
+                         <input type="password" id="t2" class="form-control"[(ngModel)]="password">
+                     </div>
+                     <button type="submit" (click)="enter()" class="btn btn-primary mb-2">Signup</button>
+                </form>
+                <a style="color: #fff;margin-top:10px"routerLink="/login2">Already registered? Click to Login!!</a>
+            </div>
+        </div>
+    </div>
+</div>
